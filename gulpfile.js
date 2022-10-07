@@ -151,7 +151,7 @@ gulp.task('default', gulp.series('build', gulp.parallel('browserSync', 'watch'))
 /**
  * Push build to gh-pages
  */
-// gulp.task('deploy', function () {
-//     return gulp.src("./dist/**/*")
-//         .pipe(deploy())
-// });
+gulp.task('deploy', function () {
+    return gulp.src("./dist/**/*")
+        .pipe(deploy())
+});
