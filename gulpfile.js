@@ -76,6 +76,7 @@ gulp.task('html', function () {
 gulp.task('ejs', function () {
     return gulp
     .src( SRC_FOLDER + '/ejs/**/!(_)*.ejs' )
+    .pipe(ejs())
 	.pipe(rename({ extname: '.html' })) // ejs 확장자를 html로 변경
     .pipe(gulp.dest( DIST_FOLDER ))
     .pipe(browserSync.stream());
